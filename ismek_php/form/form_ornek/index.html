@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> body {text-align:center} label {display:block;margin-bottom:5px;font-weight:bold;color:#900} input[type=text], select, textarea {margin-bottom:10px;height:20px;width:200px} select {height:25px} textarea {height:150px} </style>
+</head>
+<body>
+
+  <form action="kontrol.php" method="post">
+    <label>Adı Soyadı:</label>
+    <input type="text" name="adsoyad">
+    <br><br>
+    <!-- name'i değişken ismi gibi düşün-->
+    <!-- value backend tarafında bize dönen değerdir yani birisi 
+    istanbulu seçtiğinde bize 34 ifadesi gelir -->
+    <label>Şehir:</label>
+    <select name="sehir">
+      <option value="34">İstanbul</option>
+      <option value="06">Ankara</option>
+      <option value="35">İzmir</option>
+      <option value="16">Bursa</option>
+      <option value="07">Antalya</option>
+    </select>
+    <br><br>
+    <!-- radio'da üçü farklı isimde olursa birden fazla seçim yapılabilir 
+      ve bu bir hatadır bunun için her name'e aynı isim verilir
+      ve bunların içinden seçilen alınır-->
+    <label>Cinsiyet:</label>
+    <input name="cinsiyet" type="radio" value="Kadın"> Kadın
+    <input name="cinsiyet" type="radio" value="Erkek"> Erkek
+    <input name="cinsiyet" type="radio" value="Diğer"> Diğer
+    <br><br>
+    <!-- checkbox'lar php tarafına dizi halinde gelir ve grup olduğu için 
+    aynı ismi ver, dizi olduğunu söylemek için de [] koyduk -->
+    <label>Hobiler:</label>
+    <input name="hobiler[]" type="checkbox" value="Kitap Okumak"> Kitap Okumak
+    <input name="hobiler[]" type="checkbox" value="Müzik Dinlemek"> Müzik Dinlemek
+    <input name="hobiler[]" type="checkbox" value="Seyahat Etmek"> Seyahat Etmek
+    <input name="hobiler[]" type="checkbox" value="Resim Yapmak"> Resim Yapmak
+    <br><br>
+
+    <label>Açıklamalar:</label>
+    <textarea name="aciklama"></textarea>
+    <br><br>
+
+    <button type="submit"> Bilgileri Kaydet </button>
+
+</body>
+</html>
